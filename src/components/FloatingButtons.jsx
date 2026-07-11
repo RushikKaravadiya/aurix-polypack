@@ -14,7 +14,7 @@ function FloatingButtons() {
       </a>
       <a
         href="tel:+919979936435"
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lg transition hover:scale-105"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-[#1F365C] text-white shadow-lg transition hover:scale-105"
       >
         <FiPhoneCall size={22} />
       </a>

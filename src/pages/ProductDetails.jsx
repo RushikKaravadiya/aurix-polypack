@@ -8,6 +8,9 @@ function ProductDetails() {
   const { id } = useParams();
   const product = products.find((item) => item.id === id);
   const [selectedImage, setSelectedImage] = useState(product?.image);
+  const whatsappText = product
+    ? encodeURIComponent(`Hi Aurix Polypack! I am interested in ${product.name}. Please send me more details.`)
+    : '';
 
   if (!product) {
     return (
@@ -111,7 +114,7 @@ function ProductDetails() {
 
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
               <a
-                href="https://wa.me/919979936435"
+                href={`https://wa.me/919979936435?text=${whatsappText}`}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex w-full flex-1 items-center justify-center gap-2 rounded-full border border-primary bg-white px-6 py-4 text-base font-semibold text-primary transition duration-300 hover:bg-darkBlue hover:text-white hover:shadow-lg whitespace-nowrap"

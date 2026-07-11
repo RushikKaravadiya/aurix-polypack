@@ -81,9 +81,9 @@ function Quote() {
   return (
     <main>
       <section className="bg-primary px-4 py-24 text-white sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold">Quote Request</p>
-          <h1 className="mt-4 text-4xl font-semibold sm:text-5xl">Request a tailored quote for your business</h1>
+        <div className="mx-auto max-w-7xl text-center">
+          <p className="text-3xl font-semibold uppercase tracking-[0.3em] text-gold sm:text-4xl">Quote Request</p>
+          <h1 className="mx-auto mt-4 max-w-3xl text-xl font-medium text-slate-100 sm:text-2xl md:text-3xl">Request a tailored quote for your business</h1>
         </div>
       </section>
 

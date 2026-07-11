@@ -37,7 +37,7 @@ function Contact() {
               loading="lazy"
             />
           </div>
-          <div className="mt-6 grid gap-4 rounded-3xl border border-slate-200 bg-background p-6 text-center sm:grid-cols-3 sm:items-center">
+          {/* <div className="mt-6 grid gap-4 rounded-3xl border border-slate-200 bg-background p-6 text-center sm:grid-cols-3 sm:items-center">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold">Location</p>
               <p className="mt-3 text-base font-medium text-primary">Aurix Polypack</p>
@@ -46,11 +46,7 @@ function Contact() {
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold">Address</p>
               <p className="mt-3 text-base font-medium text-primary">Thorala Rd, At, Rajpar, Thorala, Gujarat 363641</p>
             </div>
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold">Coordinates</p>
-              <p className="mt-3 text-base font-medium text-primary">22.768626895107367, 70.72085234303887</p>
-            </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
