@@ -70,30 +70,38 @@ function ProductDetails() {
               />
             </div>
 
-            <div className="mt-4 grid grid-cols-4 gap-3">
-              {product.gallery.map((item, index) => {
-                const isActive =
-                  selectedImage === item ||
-                  (!selectedImage && product.image === item);
+            <div className="mt-4 overflow-x-auto">
+              <div
+                className="flex gap-3"
+                style={{
+                  width: "100%",
+                  overflowX: "auto",
+                }}
+              >
+                {product.gallery.map((item, index) => {
+                  const isActive =
+                    selectedImage === item ||
+                    (!selectedImage && product.image === item);
 
-                return (
-                  <button
-                    key={index}
-                    onClick={() => setSelectedImage(item)}
-                    className={`overflow-hidden rounded-xl border p-1 transition ${
-                      isActive
-                        ? "border-primary"
-                        : "border-slate-200 hover:border-primary"
-                    }`}
-                  >
-                    <img
-                      src={item}
-                      alt={`${product.name}-${index}`}
-                      className="h-20 w-full object-contain"
-                    />
-                  </button>
-                );
-              })}
+                  return (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedImage(item)}
+                      className={`flex-none w-[23%] min-w-[90px] rounded-xl border p-1 ${
+                        isActive
+                          ? "border-primary ring-2 ring-primary/20"
+                          : "border-slate-200"
+                      }`}
+                    >
+                      <img
+                        src={item}
+                        alt=""
+                        className="h-20 w-full rounded-lg object-contain bg-white"
+                      />
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
 
