@@ -9,6 +9,7 @@ const products = [
   image: "/images/PPFabricRoll1.jpg",
   gallery: [
     "/images/PPFabricRoll1.jpg",
+    "/images/PPFabricRoll4.png",
     "/images/PPFabricRoll2.jpg",
     "/images/PPFabricRoll3.jpg"
   ],
@@ -123,25 +124,75 @@ const products = [
     "/images/PPWovenBag04.jpg"
   ]
 },
-  {
-    id: 'bopp-bags',
-    name: 'BOPP Bags',
-    category: 'Bags',
-    shortDescription: 'Attractive and protective packaging for retail and consumer goods.',
-    description:
-      'BOPP bags combine the strength of woven fabric with the visual appeal of printed films, making them ideal for premium packaging.',
-    specifications: ['Laminate: BOPP film', 'Printing: up to 8 colors', 'Finish: Matt or gloss'],
-    applications: ['Food packaging', 'Animal feed', 'Retail bags'],
-    features: ['Excellent graphics', 'Puncture resistant', 'Moisture protection'],
-    advantages: ['Premium appearance', 'Brand visibility', 'Long shelf life'],
-    sizes: ['10 kg', '25 kg', '50 kg'],
-    colors: ['Multi-color', 'Custom'],
-    image: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80',
-    ],
-  },
+{
+  id: "hdpe-fabric",
+  name: "HDPE Woven Fabric",
+  category: "Fabric",
+  shortDescription:
+    "Premium HDPE woven fabric designed for tarpaulins, agro textiles, industrial packaging, and outdoor applications.",
+  description:
+    "Aurix Polypack manufactures premium-quality HDPE Woven Fabric using high-grade virgin HDPE material. Our fabrics offer excellent tensile strength, UV resistance, weather protection, and long-lasting durability, making them ideal for agricultural, industrial, and outdoor applications.",
+
+  specifications: [
+    "Material: Virgin HDPE",
+    "Width: 12 inch to 72 inch",
+    "Length: As per customer requirement",
+    "GSM: 60 to 220 GSM",
+    "Denier: 500D to 1500D",
+    "Fabric Type: Circular & Flat Woven",
+    "UV Stabilization: Available",
+    "Laminated & Unlaminated Options",
+    "Roll Form Supply",
+    "Custom Specifications Available"
+  ],
+
+  applications: [
+    "Tarpaulin Fabric",
+    "Agro Textiles",
+    "Ground Covers",
+    "Pond Liners",
+    "Truck Covers",
+    "Industrial Covers",
+    "Construction Sheets",
+    "Shade Net Base Fabric",
+    "Packaging Fabric",
+    "Outdoor Protection Covers"
+  ],
+
+  features: [
+    "High Tensile Strength",
+    "UV Resistant",
+    "Weather Resistant",
+    "Moisture Resistant",
+    "Lightweight",
+    "Excellent Tear Resistance",
+    "Long Service Life",
+    "Laminated & Unlaminated Options",
+    "Easy to Handle",
+    "100% Recyclable"
+  ],
+
+  advantages: [
+    "Excellent Outdoor Performance",
+    "Superior UV Protection",
+    "Long-Term Durability",
+    "Chemical Resistant",
+    "Cost-Effective Solution",
+    "Easy Transportation",
+    "Low Maintenance",
+    "Custom Widths Available",
+    "Export Quality",
+    "Suitable for Heavy-Duty Applications"
+  ],
+
+  image: "/images/HDPEFabricRoll01.jpg",
+
+  gallery: [
+    "/images/HDPEFabricRoll01.jpg",
+    "/images/HDPEFabricRoll02.jpg",
+    "/images/HDPEFabricRoll03.webp"
+    ]
+},
   {
     id: 'hdpe-fabric',
     name: 'HDPE Fabric',
