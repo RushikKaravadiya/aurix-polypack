@@ -1,49 +1,79 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 function ProductCard({ product }) {
   return (
-    <Link to={`/products/${product.id}`} className="block">
-      <motion.article
-        whileHover={{ y: -8, scale: 1.01 }}
-        className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-soft transition-all duration-300"
+    <Link to={`/products/${product.id}`} className="block h-full">
+      <article
+        className="
+          flex
+          h-full
+          flex-col
+          overflow-hidden
+          rounded-3xl
+          border
+          border-slate-200
+          bg-white
+          shadow-soft
+          transition-all
+          duration-300
+          hover:-translate-y-1
+          hover:shadow-xl
+        "
       >
-        {/* Product Image */}
+        {/* Image */}
         <img
           src={product.image}
           alt={product.name}
-          className="h-56 w-full object-cover"
+          className="h-56 w-full rounded-t-3xl object-cover"
         />
 
-        {/* Card Content */}
-        <div className="flex flex-col p-6">
-          <h3 className="mb-3 text-xl font-semibold text-primary">
+        {/* Content */}
+        <div className="flex flex-1 flex-col p-6">
+          {/* Title */}
+          <h3
+            title={product.name}
+            className="mb-3 line-clamp-1 text-xl font-semibold text-primary"
+          >
             {product.name}
           </h3>
 
           {/* Description */}
-          <div className="mb-6 min-h-[3rem]">
+          <div className="mb-6 flex-1">
             <p
-              className="
-                text-sm
-                leading-6
-                text-slate-600
-                line-clamp-2
-                transition-all
-                duration-300
-                lg:group-hover:line-clamp-none
-              "
+              title={product.shortDescription}
+              className="cursor-help line-clamp-2 text-sm leading-7 text-slate-600"
             >
               {product.shortDescription}
             </p>
           </div>
 
           {/* Button */}
-          <div className="mt-auto inline-flex w-full items-center justify-center rounded-full border border-primary bg-white px-6 py-3 text-sm font-semibold text-primary transition duration-300 group-hover:bg-darkBlue group-hover:text-white">
+          <div
+            className="
+              mt-auto
+              flex
+              w-full
+              items-center
+              justify-center
+              rounded-full
+              border
+              border-primary
+              bg-white
+              px-6
+              py-3
+              text-sm
+              font-semibold
+              text-primary
+              transition-all
+              duration-300
+              hover:bg-darkBlue
+              hover:text-white
+            "
+          >
             View Details
           </div>
         </div>
-      </motion.article>
+      </article>
     </Link>
   );
 }
