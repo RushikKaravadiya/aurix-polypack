@@ -15,6 +15,22 @@ function ProductDetails() {
       )
     : "";
 
+  const infoCards = [
+    product.applications?.length && "applications",
+    product.features?.length && "features",
+    product.advantages?.length && "advantages",
+    product.sizes?.length && "sizes",
+  ].filter(Boolean);
+
+  const gridCols =
+    infoCards.length === 4
+      ? "md:grid-cols-2 lg:grid-cols-4"
+      : infoCards.length === 3
+        ? "md:grid-cols-2 lg:grid-cols-3"
+        : infoCards.length === 2
+          ? "md:grid-cols-2"
+          : "grid-cols-1";
+
   if (!product) {
     return (
       <main className="mx-auto max-w-7xl px-4 py-16 text-center">
@@ -44,32 +60,36 @@ function ProductDetails() {
             ← Back to Products
           </Link>
         </div>
-        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
-          <div>
-            <div className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-soft transition-all duration-500 mb-6">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1fr] items-start">
+          <div className="lg:sticky lg:top-28 self-start">
+            <div className="mb-6 flex h-[500px] items-center justify-center overflow-hidden rounded-[32px] border border-slate-200 bg-white p-6 shadow-soft">
               <img
                 src={selectedImage || product.image}
                 alt={product.name}
-                className="h-[420px] w-full object-cover transition-transform duration-500 ease-out hover:scale-105"
+                className="max-h-full max-w-full object-contain"
               />
             </div>
 
-            <div className="mt-4 grid gap-3 grid-cols-3 sm:grid-cols-4">
+            <div className="mt-4 grid grid-cols-4 gap-3">
               {product.gallery.map((item, index) => {
                 const isActive =
                   selectedImage === item ||
                   (!selectedImage && product.image === item);
+
                 return (
                   <button
                     key={index}
-                    type="button"
                     onClick={() => setSelectedImage(item)}
-                    className={`overflow-hidden rounded-2xl border transition duration-300 ${isActive ? "border-primary bg-primary/10" : "border-slate-200 bg-white hover:border-primary/80 hover:bg-slate-50"}`}
+                    className={`overflow-hidden rounded-xl border p-1 transition ${
+                      isActive
+                        ? "border-primary"
+                        : "border-slate-200 hover:border-primary"
+                    }`}
                   >
                     <img
                       src={item}
-                      alt={`${product.name} ${index + 1}`}
-                      className="h-20 w-full object-cover rounded-xl"
+                      alt={`${product.name}-${index}`}
+                      className="h-20 w-full object-contain"
                     />
                   </button>
                 );
@@ -126,12 +146,9 @@ function ProductDetails() {
         </div>
       </section>
 
-      {(product.applications?.length > 0 ||
-        product.features?.length > 0 ||
-        product.advantages?.length > 0 ||
-        product.sizes?.length > 0) && (
+      {infoCards.length > 0 && (
         <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className={`grid gap-8 ${gridCols}`}>
             {product.applications?.length > 0 && (
               <div className="rounded-3xl border border-slate-200 bg-background p-6">
                 <h3 className="font-semibold text-primary">Applications</h3>

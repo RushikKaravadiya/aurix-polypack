@@ -48,25 +48,81 @@ const products = [
     "Export Quality",
   ]
 },
-  {
-    id: 'pp-woven-bags',
-    name: 'PP Woven Bags',
-    category: 'Bags',
-    shortDescription: 'Reliable woven packaging bags for grains, cement, chemicals, and fertilizers.',
-    description:
-      'Designed for heavy-duty usage, these bags offer excellent load-bearing strength and can be customized with print and lamination.',
-    specifications: ['Capacity: 5 kg to 100 kg', 'Fabric type: Circular/Flat woven', 'Closure: Heat sealed or stitched'],
-    applications: ['Cement bags', 'Animal feed bags', 'Chemical packaging'],
-    features: ['Custom printing', 'Reinforced handles', 'Moisture resistant'],
-    advantages: ['High durability', 'Easy handling', 'Ideal for bulk storage'],
-    sizes: ['5 kg', '10 kg', '50 kg'],
-    colors: ['Brown', 'White', 'Custom'],
-    image: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80',
-    ],
-  },
+{
+  id: "pp-woven-bags",
+  name: "PP Woven Bags",
+  category: "Bags",
+  shortDescription:
+    "Premium PP woven bags for packaging grains, cement, fertilizers, sugar, chemicals, and industrial products. Available in laminated, unlaminated, and BOPP laminated options.",
+  description:
+    "Aurix Polypack manufactures premium-quality PP Woven Bags using 100% virgin polypropylene fabric. Our bags offer excellent tensile strength, moisture resistance, and long-lasting durability. We manufacture laminated, unlaminated, and BOPP laminated woven bags with custom sizes and multicolor printing for agricultural, industrial, and commercial packaging applications.",
+  specifications: [
+    "Bag Type: Laminated, Unlaminated & BOPP Laminated",
+    "Capacity: 5 kg to 100 kg & Customized",
+    "Width: 12 inch to 36 inch",
+    "Length: As per customer requirement",
+    "Fabric Type: Circular & Flat Woven",
+    "GSM: 55 to 120 GSM & Customized",
+    "Denier: 500D to 1500D & Customized",
+    "Top: Heat Cut / Hemmed",
+    "Bottom: Single Fold / Double Fold / Stitched",
+    "Printing: Plain, Flexographic & BOPP Rotogravure",
+    "Lamination: Available",
+    "UV Stabilization: Available"
+  ],
+
+  applications: [
+    "Rice Bags",
+    "Wheat Bags",
+    "Flour Bags",
+    "Sugar Bags",
+    "Cement Bags",
+    "Fertilizer Bags",
+    "Animal Feed Bags",
+    "Chemical Bags",
+    "Seeds Packaging",
+    "Mineral Bags",
+    "Industrial Packaging",
+    "BOPP Printed Retail Bags"
+  ],
+
+  features: [
+    "High Tensile Strength",
+    "Lightweight & Durable",
+    "Moisture Resistant",
+    "Tear Resistant",
+    "UV Stabilized",
+    "Laminated & Unlaminated Options",
+    "BOPP Laminated Bags Available",
+    "High-Quality Multi-Color Printing",
+    "Food Grade Material Available",
+    "Reusable",
+    "100% Recyclable"
+  ],
+
+  advantages: [
+    "Long Service Life",
+    "Excellent Load Carrying Capacity",
+    "Superior Print Quality",
+    "Excellent Shelf Appeal",
+    "Cost-Effective Packaging",
+    "Weather Resistant",
+    "Easy Storage & Transportation",
+    "Eco-Friendly",
+    "Custom Sizes & Colors",
+    "Export Quality",
+    "Suitable for Heavy-Duty Applications"
+  ],
+
+  image: "/images/PPWovenBag01.jpg",
+
+  gallery: [
+    "/images/PPWovenBag01.jpg",
+    "/images/PPWovenBag02.jpg",
+    "/images/PPWovenBag03.png",
+    "/images/PPWovenBag04.jpg"
+  ]
+},
   {
     id: 'bopp-bags',
     name: 'BOPP Bags',
