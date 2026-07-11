@@ -1,23 +1,53 @@
 const products = [
-  {
-    id: 'pp-woven-fabric',
-    name: 'PP Woven Fabric',
-    category: 'Fabric',
-    shortDescription: 'High-strength fabric used in packaging, agriculture, and industrial applications.',
-    description:
-      'Our PP woven fabric is engineered for exceptional tensile strength, tear resistance, and long-term durability. It is suitable for bulk packaging, logistics, and agricultural needs.',
-    specifications: ['Width: 20 cm to 300 cm', 'Weight: 50 GSM to 150 GSM', 'Material: 100% virgin polypropylene'],
-    applications: ['Fertilizer packaging', 'Rice and grain sacks', 'Industrial liners'],
-    features: ['UV stabilized', 'Water resistant', 'Excellent printability'],
-    advantages: ['Cost-effective', 'Reusable', 'Weather resistant'],
-    sizes: ['25 kg', '50 kg', '100 kg'],
-    colors: ['Natural', 'White', 'Customized'],
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=800&q=80',
+{
+  id: "pp-woven-fabric",
+  name: "PP Woven Fabric",
+  category: "Fabric",
+  shortDescription:
+    "Premium quality PP woven fabric manufactured using high-strength polypropylene tapes for industrial and agricultural packaging.",
+  description: "Aurix Polypack manufactures premium PP Woven Fabric using 100% virgin polypropylene, offering high tensile strength, durability, UV resistance, and moisture protection. Ideal for woven sacks, BOPP bags, FIBC bags, tarpaulins, and industrial packaging.",
+  image: "/images/PPFabricRoll1.jpg",
+  gallery: [
+    "/images/PPFabricRoll1.jpg",
+    "/images/PPFabricRoll2.jpg",
+    "/images/PPFabricRoll3.jpg"
+  ],
+  specifications: [
+    "Fabric Type: Circular & Flat Woven",
+    "Width: 12 inch to 36 inch",
+    "GSM: 50 to 180 GSM & Customized",
+    "Denier: 500D to 1500D & Customized",
+    "Color: White, Natural & Customized",
+    "Roll Length: As Per Customer Requirement",
     ],
-  },
+  applications: [
+    "PP Woven Bags",
+    "BOPP Laminated Bags",
+    "FIBC / Jumbo Bags",
+    "Fertilizer Bags",
+    "Bags Manufacturing(Rice, Flour, Sugar, Cement, Animal Feed)",
+    "Industrial Packaging",
+  ],
+  features: [
+    "High Tensile Strength",
+    "Excellent Tear Resistance",
+    "Moisture Resistant",
+    "Superior Weaving Quality",
+    "Excellent Printability",
+    "Custom Width Available",
+    "Eco-Friendly",
+    "100% Recyclable",
+  ],
+  advantages: [
+    "Long Service Life",
+    "Cost Effective",
+    "Weather Resistant",
+    "Easy Handling",
+    "High Load Carrying Capacity",
+    "Low Maintenance",
+    "Export Quality",
+  ]
+},
   {
     id: 'pp-woven-bags',
     name: 'PP Woven Bags',

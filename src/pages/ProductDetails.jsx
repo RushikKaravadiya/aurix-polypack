@@ -10,8 +10,10 @@ function ProductDetails() {
   const product = products.find((item) => item.id === id);
   const [selectedImage, setSelectedImage] = useState(product?.image);
   const whatsappText = product
-    ? encodeURIComponent(`Hi Aurix Polypack! I am interested in ${product.name}. Please send me more details.`)
-    : '';
+    ? encodeURIComponent(
+        `Hi Aurix Polypack! I am interested in ${product.name}. Please send me more details.`,
+      )
+    : "";
 
   if (!product) {
     return (
@@ -124,42 +126,58 @@ function ProductDetails() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div className="rounded-3xl border border-slate-200 bg-background p-6">
-            <h3 className="font-semibold text-primary">Applications</h3>
-            <ul className="mt-3 space-y-2 text-slate-600">
-              {product.applications.map((item) => (
-                <li key={item}>• {item}</li>
-              ))}
-            </ul>
+      {(product.applications?.length > 0 ||
+        product.features?.length > 0 ||
+        product.advantages?.length > 0 ||
+        product.sizes?.length > 0) && (
+        <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {product.applications?.length > 0 && (
+              <div className="rounded-3xl border border-slate-200 bg-background p-6">
+                <h3 className="font-semibold text-primary">Applications</h3>
+                <ul className="mt-3 space-y-2 text-slate-600">
+                  {product.applications.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {product.features?.length > 0 && (
+              <div className="rounded-3xl border border-slate-200 bg-background p-6">
+                <h3 className="font-semibold text-primary">Features</h3>
+                <ul className="mt-3 space-y-2 text-slate-600">
+                  {product.features.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {product.advantages?.length > 0 && (
+              <div className="rounded-3xl border border-slate-200 bg-background p-6">
+                <h3 className="font-semibold text-primary">Advantages</h3>
+                <ul className="mt-3 space-y-2 text-slate-600">
+                  {product.advantages.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {product.sizes?.length > 0 && (
+              <div className="rounded-3xl border border-slate-200 bg-background p-6">
+                <h3 className="font-semibold text-primary">Available Sizes</h3>
+                <ul className="mt-3 space-y-2 text-slate-600">
+                  {product.sizes.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
-          <div className="rounded-3xl border border-slate-200 bg-background p-6">
-            <h3 className="font-semibold text-primary">Features</h3>
-            <ul className="mt-3 space-y-2 text-slate-600">
-              {product.features.map((item) => (
-                <li key={item}>• {item}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="rounded-3xl border border-slate-200 bg-background p-6">
-            <h3 className="font-semibold text-primary">Advantages</h3>
-            <ul className="mt-3 space-y-2 text-slate-600">
-              {product.advantages.map((item) => (
-                <li key={item}>• {item}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="rounded-3xl border border-slate-200 bg-background p-6">
-            <h3 className="font-semibold text-primary">Available Sizes</h3>
-            <ul className="mt-3 space-y-2 text-slate-600">
-              {product.sizes.map((item) => (
-                <li key={item}>• {item}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
     </main>
   );
 }

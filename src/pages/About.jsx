@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import PageHeader from '../components/PageHeader'
+import MainLogo from "/images/MainLogo.png";
 
 const strengths = ['Advanced infrastructure', 'Experienced engineering team', 'Stringent quality controls', 'Customized production capabilities']
 
@@ -10,7 +11,7 @@ function About() {
 
       <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
-          <motion.img initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1000&q=80" alt="Manufacturing unit" className="h-[450px] w-full rounded-[32px] object-cover shadow-soft" />
+          <motion.img initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} src={MainLogo} alt="Manufacturing unit" className="h-[450px] w-full rounded-[32px] object-cover shadow-soft" />
           <div className="space-y-5">
             <h2 className="text-3xl font-semibold text-primary">Company Introduction</h2>
             <p className="text-lg leading-8 text-slate-600">Aurix Polypack is a dedicated PP woven fabric manufacturer specializing in high-quality woven fabrics, bags, tarpaulin, and related packaging products for domestic and international clientele.</p>

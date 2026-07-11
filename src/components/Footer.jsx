@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
-import logo from '../assets/images/logo.png'
 
 function Footer() { 
   return (
@@ -10,7 +9,7 @@ function Footer() {
 <div className="mb-4 flex items-center gap-3">
   <div className="flex h-15 w-15 items-center justify-center rounded-full bg-white p-2">
     <img
-  src={logo}
+  src="/images/logo.png"
   alt="Aurix Polypack logo"
   className="h-10 w-10 object-contain"
 />

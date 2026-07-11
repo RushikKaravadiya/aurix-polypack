@@ -2,6 +2,9 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import lorexImage from '/images/Lorex.jpg'
+import lslBanner from '/images/LSL6.jpg'
+import FabricRoll from '/images/PPFabricRoll1.jpg'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -11,17 +14,17 @@ const slides = [
   {
     title: 'Premium PP Woven Packaging Solutions',
     description: 'Engineered fabrics and bags that combine strength, durability, and customization for diverse industries.',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80',
+    image: lorexImage,
   },
   {
     title: 'Built for Industrial Strength',
     description: 'From agriculture to logistics, our products ensure safe handling and dependable performance.',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80',
+    image: lslBanner,
   },
   {
     title: 'Trusted by Modern Manufacturers',
     description: 'We support businesses with tailored packaging that elevates branding and operational efficiency.',
-    image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80',
+    image: FabricRoll,
   },
 ]
 

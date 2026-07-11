@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-import logo from "../assets/images/horizontalLogo.png";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -23,7 +22,7 @@ function Navbar() {
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
        <Link to="/" className="flex items-center border-0 outline-none">
   <img
-    src={logo}
+    src="/images/horizontalLogo.png"
     alt="Aurix Polypack logo"
     className="h-36 w-auto object-contain border-0 outline-none"
   />
