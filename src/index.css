@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #061F4A;
+  background-color: #F8FAFC;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #F8FAFC;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #D4A642;
+  color: white;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #D4A642 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #D4A642 !important;
+}

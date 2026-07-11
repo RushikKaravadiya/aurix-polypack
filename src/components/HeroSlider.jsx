@@ -1,0 +1,79 @@
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules'
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/effect-fade'
+
+const slides = [
+  {
+    title: 'Premium PP Woven Packaging Solutions',
+    description: 'Engineered fabrics and bags that combine strength, durability, and customization for diverse industries.',
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80',
+  },
+  {
+    title: 'Built for Industrial Strength',
+    description: 'From agriculture to logistics, our products ensure safe handling and dependable performance.',
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80',
+  },
+  {
+    title: 'Trusted by Modern Manufacturers',
+    description: 'We support businesses with tailored packaging that elevates branding and operational efficiency.',
+    image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80',
+  },
+]
+
+function HeroSlider() {
+  return (
+    <section className="relative overflow-hidden">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay, EffectFade]}
+        spaceBetween={0}
+        slidesPerView={1}
+        effect="fade"
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        navigation
+        pagination={{ clickable: true }}
+        className="h-[80vh] min-h-[620px]"
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div
+              className="relative h-full w-full bg-cover bg-center"
+              style={{ backgroundImage: `linear-gradient(90deg, rgba(4,24,60,0.92), rgba(6,31,74,0.55)), url(${slide.image})` }}
+            >
+              <div className="mx-auto flex h-full max-w-7xl items-center px-4 sm:px-6 lg:px-8">
+                <motion.div
+                  initial={{ opacity: 0, y: 25 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  className="max-w-2xl text-white"
+                >
+                  <p className="mb-4 inline-block rounded-full border border-gold/50 bg-white/10 px-4 py-2 text-sm font-medium tracking-[0.25em] text-gold">
+                    AURIX POLYPACK
+                  </p>
+                  <h1 className="mb-5 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+                    {slide.title}
+                  </h1>
+                  <p className="mb-8 max-w-xl text-lg text-slate-200">{slide.description}</p>
+                  <div className="flex flex-wrap gap-4">
+                    <Link to="/products" className="rounded-full bg-gold px-6 py-3 font-semibold text-primary transition hover:bg-lightGold">
+                      View Products
+                    </Link>
+                    <Link to="/quote" className="rounded-full border border-white/70 px-6 py-3 font-semibold text-white transition hover:bg-white/10">
+                      Get Quote
+                    </Link>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
+  )
+}
+
+export default HeroSlider
