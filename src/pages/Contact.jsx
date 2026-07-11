@@ -1,22 +1,14 @@
 import { motion } from 'framer-motion'
 import ContactInfo from '../components/ContactInfo'
+import PageHeader from '../components/PageHeader'
 
 function Contact() {
   return (
     <main>
-      <section className="bg-primary px-4 py-24 text-white sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl text-center">
-          <p className="text-3xl font-semibold uppercase tracking-[0.3em] text-gold sm:text-4xl">Contact Us</p>
-          <h1 className="mx-auto mt-4 max-w-3xl text-xl font-medium text-slate-100 sm:text-2xl md:text-3xl">We are ready to assist with your next packaging project</h1>
-        </div>
-      </section>
+      <PageHeader title="Contact Us" subtitle="We are ready to assist with your next packaging project" />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="rounded-[32px] border border-slate-200 bg-white p-6 shadow-soft sm:p-8">
-          <div className="mb-8 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold">Reach Us</p>
-            <h2 className="mt-3 text-3xl font-semibold text-primary">Contact details</h2>
-          </div>
           <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <ContactInfo />
           </motion.div>

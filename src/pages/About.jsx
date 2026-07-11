@@ -1,18 +1,14 @@
 import { motion } from 'framer-motion'
+import PageHeader from '../components/PageHeader'
 
 const strengths = ['Advanced infrastructure', 'Experienced engineering team', 'Stringent quality controls', 'Customized production capabilities']
 
 function About() {
   return (
     <main>
-      <section className="bg-primary px-4 py-24 text-white sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl text-center">
-          <p className="text-3xl font-semibold uppercase tracking-[0.3em] text-gold sm:text-4xl">About Us</p>
-          <h1 className="mx-auto mt-4 max-w-3xl text-xl font-medium text-slate-100 sm:text-2xl md:text-3xl">Delivering performance and trust through every woven product</h1>
-        </div>
-      </section>
+      <PageHeader title="About Us" subtitle="Delivering performance and trust through every woven product" />
 
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <motion.img initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1000&q=80" alt="Manufacturing unit" className="h-[450px] w-full rounded-[32px] object-cover shadow-soft" />
           <div className="space-y-5">

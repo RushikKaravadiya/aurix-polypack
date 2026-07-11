@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import emailjs from 'emailjs-com'
 import emailConfig from '../config/emailjs'
+import PageHeader from '../components/PageHeader'
 
 function Quote() {
   const [form, setForm] = useState({
@@ -80,12 +81,7 @@ function Quote() {
 
   return (
     <main>
-      <section className="bg-primary px-4 py-24 text-white sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl text-center">
-          <p className="text-3xl font-semibold uppercase tracking-[0.3em] text-gold sm:text-4xl">Quote Request</p>
-          <h1 className="mx-auto mt-4 max-w-3xl text-xl font-medium text-slate-100 sm:text-2xl md:text-3xl">Request a tailored quote for your business</h1>
-        </div>
-      </section>
+      <PageHeader title="Quote Request" subtitle="Request a tailored quote for your business" />
 
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
         <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-soft lg:p-10">

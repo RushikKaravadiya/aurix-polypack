@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaWhatsapp, FaChevronRight } from "react-icons/fa";
 import products from "../data/products";
+import PageHeader from "../components/PageHeader";
 
 function ProductDetails() {
   const { id } = useParams();
@@ -14,7 +15,7 @@ function ProductDetails() {
 
   if (!product) {
     return (
-      <main className="mx-auto max-w-7xl px-4 py-24 text-center">
+      <main className="mx-auto max-w-7xl px-4 py-16 text-center">
         <h1 className="text-3xl font-semibold text-primary">
           Product not found
         </h1>
@@ -30,16 +31,7 @@ function ProductDetails() {
 
   return (
     <main>
-      <section className="bg-primary px-4 py-24 text-white sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl text-center">
-          <p className="text-3xl font-semibold uppercase tracking-[0.3em] text-gold sm:text-4xl">
-            Product Details
-          </p>
-          <h1 className="mx-auto mt-4 max-w-3xl text-xl font-medium text-slate-100 sm:text-2xl md:text-3xl">
-            {product.name}
-          </h1>
-        </div>
-      </section>
+      <PageHeader title="Product Details" subtitle={product.name} />
 
       <section className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         <div className="mb-6 flex justify-start">
