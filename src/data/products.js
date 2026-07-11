@@ -93,26 +93,7 @@ const products = [
       'https://images.unsplash.com/photo-1612815131414-2d0f7f4b6ab3?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1592878904946-3f9d9b8b20e2?auto=format&fit=crop&w=800&q=80',
     ],
-  },
-  {
-    id: 'tarpaulin',
-    name: 'Tarpaulin',
-    category: 'Covers',
-    shortDescription: 'Weatherproof covers for transport, storage, and farming needs.',
-    description:
-      'Tarpaulins provide reliable protection against rain, dust, and sunlight for cargo and equipment.',
-    specifications: ['Material: PE/PP coated fabric', 'Weight: 180 to 400 GSM', 'Size: custom'],
-    applications: ['Truck covers', 'Warehouse shelters', 'Agricultural protection'],
-    features: ['Waterproof', 'UV proof', 'Strong eyelets'],
-    advantages: ['Long service life', 'High coverage', 'Easy installation'],
-    sizes: ['Custom', 'Standard sizes'],
-    colors: ['Blue', 'Green', 'Silver'],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80',
-    ],
-  },
+  }
 ]
 
 export default products

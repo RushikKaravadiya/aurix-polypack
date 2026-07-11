@@ -36,7 +36,7 @@ function HeroSlider() {
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         navigation
         pagination={{ clickable: true }}
-        className="h-[80vh] min-h-[620px]"
+        className="h-[50vh] min-h-[350px] sm:h-[60vh] sm:min-h-[450px] lg:h-[80vh] lg:min-h-[620px]"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
@@ -54,15 +54,15 @@ function HeroSlider() {
                   <p className="mb-4 inline-block rounded-full border border-gold/50 bg-white/10 px-4 py-2 text-sm font-medium tracking-[0.25em] text-gold">
                     AURIX POLYPACK
                   </p>
-                  <h1 className="mb-5 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+                  <h1 className="mb-5 text-2xl font-bold leading-tight sm:text-4xl lg:text-6xl">
                     {slide.title}
                   </h1>
-                  <p className="mb-8 max-w-xl text-lg text-slate-200">{slide.description}</p>
-                  <div className="flex flex-wrap gap-4">
-                    <Link to="/products" className="rounded-full bg-gold px-6 py-3 font-semibold text-primary transition hover:bg-lightGold">
+                  <p className="mb-8 max-w-xl text-sm sm:text-base lg:text-lg text-slate-200">{slide.description}</p>
+                  <div className="flex flex-wrap gap-2 sm:gap-4">
+                    <Link to="/products" className="rounded-full bg-gold px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold text-primary transition hover:bg-lightGold">
                       View Products
                     </Link>
-                    <Link to="/quote" className="rounded-full border border-white/70 px-6 py-3 font-semibold text-white transition hover:bg-white/10">
+                    <Link to="/quote" className="rounded-full border border-white/70 px-4 py-2 sm:px-6 sm:py-3 text-sm sm:text-base font-semibold text-white transition hover:bg-white/10">
                       Get Quote
                     </Link>
                   </div>

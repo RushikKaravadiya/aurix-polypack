@@ -48,7 +48,7 @@ function Home() {
     <main>
       <HeroSlider />
 
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-5">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-gold">About Aurix Polypack</p>

@@ -21,11 +21,11 @@ function Navbar() {
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
       {/* <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"> */}
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-       <Link to="/" className="flex items-center">
+       <Link to="/" className="flex items-center border-0 outline-none">
   <img
     src={logo}
     alt="Aurix Polypack logo"
-    className="h-36 w-auto object-contain"
+    className="h-36 w-auto object-contain border-0 outline-none"
   />
 </Link>
 
