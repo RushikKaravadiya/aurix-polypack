@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import PageHeader from "../components/PageHeader";
-import MainLogo from "/images/MainLogo.png";
+import MainLogo from "/images/aboutUS.png";
 import {
   FaBullseye,
   FaEye,
