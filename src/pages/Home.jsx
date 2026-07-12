@@ -1,4 +1,6 @@
 import { useState } from "react";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import HeroSlider from "../components/HeroSlider";
@@ -8,10 +10,18 @@ import products from "../data/products";
 import { FaIndustry, FaShieldAlt, FaTruck, FaChartLine } from "react-icons/fa";
 
 const stats = [
-  { label: "Years of Expertise", value: "15+" },
-  { label: "Products Manufactured", value: "100+" },
-  { label: "Happy Clients", value: "500+" },
-  { label: "Export Markets", value: "20+" },
+  {
+    label: "Years of Expertise",
+    value: 9,
+  },
+  {
+    label: "Happy Clients",
+    value: 125,
+  },
+  {
+    label: "Export Markets",
+    value: 7,
+  },
 ];
 
 const features = [
@@ -55,6 +65,19 @@ const testimonials = [
       "Professional team, prompt communication, and excellent product consistency. A trusted partner.",
   },
 ];
+
+function AnimatedCounter({ end }) {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+    triggerOnce: false, // change to true if you want it only the first time
+  });
+
+  return (
+    <span ref={ref}>
+      {inView ? <CountUp start={0} end={end} duration={2} /> : 0}+
+    </span>
+  );
+}
 
 function Home() {
   const [quoteOpen, setQuoteOpen] = useState(false);
@@ -139,18 +162,25 @@ function Home() {
         </div>
       </section>
 
-      <section className="bg-primary py-8 text-white">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
-          {stats.map((stat) => (
+      <section className="bg-primary py-10 text-white">
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 sm:px-6 lg:grid-cols-3 lg:px-8">
+          {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="rounded-3xl border border-white/10 bg-white/10 p-6 text-center"
+              viewport={{ once: false }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.15,
+              }}
+              className="rounded-3xl border border-white/10 bg-white/10 p-8 text-center backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:bg-white/15"
             >
-              <p className="text-4xl font-semibold text-gold">{stat.value}</p>
-              <p className="mt-2 text-sm text-slate-200">{stat.label}</p>
+              <h3 className="text-5xl font-bold text-gold">
+                <AnimatedCounter end={stat.value} />
+              </h3>
+
+              <p className="mt-3 text-lg text-slate-200">{stat.label}</p>
             </motion.div>
           ))}
         </div>
