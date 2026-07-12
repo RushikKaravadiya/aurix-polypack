@@ -77,20 +77,26 @@ function Footer() {
           <h4 className="mb-4 font-semibold">Follow Us</h4>
           <div className="flex gap-3">
             <a
-              href="https://facebook.com"
-              className="rounded-full bg-white/10 p-3 hover:bg-gold"
+              href="https://www.facebook.com/profile.php?id=61591848421666"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-white/10 p-3 hover:bg-gold transition"
             >
               <FaFacebookF />
             </a>
             <a
-              href="https://instagram.com"
-              className="rounded-full bg-white/10 p-3 hover:bg-gold"
+              href="https://www.instagram.com/aurix_polypack/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-white/10 p-3 hover:bg-gold transition"
             >
               <FaInstagram />
             </a>
             <a
-              href="https://linkedin.com"
-              className="rounded-full bg-white/10 p-3 hover:bg-gold"
+              href="https://www.linkedin.com/company/aurix-polypack/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-white/10 p-3 hover:bg-gold transition"
             >
               <FaLinkedinIn />
             </a>
