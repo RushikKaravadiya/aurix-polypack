@@ -44,7 +44,7 @@ function Quote() {
     try {
       await emailjs.send(
         emailConfig.serviceId,
-        emailConfig.templateId,
+        emailConfig.quoteTemplateId,
         {
           from_name: form.fullName,
           company_name: form.companyName,

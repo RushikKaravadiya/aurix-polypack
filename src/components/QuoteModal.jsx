@@ -48,7 +48,7 @@ function QuoteModal({ open, onClose }) {
     try {
       await emailjs.send(
         emailConfig.serviceId,
-        emailConfig.templateId,
+        emailConfig.quoteTemplateId,
         {
           from_name: form.fullName,
           company_name: form.companyName,
@@ -129,16 +129,6 @@ function QuoteModal({ open, onClose }) {
               />
               {errors.requirement && <span className="text-sm text-red-500">{errors.requirement}</span>}
             </div>
-
-            <div className="md:col-span-2">
-              <label className="text-sm font-medium text-primary">Upload File</label>
-              <input
-                type="file"
-                onChange={(e) => setForm({ ...form, file: e.target.files?.[0]?.name || '' })}
-                className="mt-1 w-full rounded-xl border border-slate-300 px-4 py-3"
-              />
-            </div>
-
             <div className="md:col-span-2">
               <button type="submit" disabled={loading} className="w-full rounded-full bg-primary px-6 py-3 font-semibold text-white transition hover:bg-darkBlue disabled:cursor-not-allowed disabled:opacity-70">
                 {loading ? 'Sending...' : 'Send Quote Request'}
