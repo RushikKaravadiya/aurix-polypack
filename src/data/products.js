@@ -45,10 +45,6 @@ const products = [
       "/images/PPFabricRoll4.png",
       "/images/PPFabricRoll2.jpg",
       "/images/PPFabricRoll3.jpg",
-      "/images/PPFabricRoll1.jpg",
-      "/images/PPFabricRoll4.png",
-      "/images/PPFabricRoll2.jpg",
-      "/images/PPFabricRoll3.jpg",
     ],
   },
   {

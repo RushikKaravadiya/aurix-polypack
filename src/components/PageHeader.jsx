@@ -1,6 +1,6 @@
 function PageHeader({ title, subtitle }) {
   return (
-    <section className="relative overflow-hidden bg-[#0A2146] px-4 py-16 text-white sm:px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-[#0A2146] px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 text-white">
       {/* Background Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.10),transparent_60%)]" />
 
@@ -21,16 +21,16 @@ function PageHeader({ title, subtitle }) {
 
       {/* Content */}
       <div className="relative mx-auto max-w-7xl text-center">
-        <p className="text-3xl font-semibold uppercase tracking-[0.3em] text-[#D4A642] sm:text-4xl">
+        <p className="text-xl font-semibold uppercase tracking-[0.2em] text-[#D4A642] sm:text-3xl sm:tracking-[0.3em] lg:text-4xl">
           {title}
         </p>
 
-        <h1 className="mx-auto mt-4 max-w-3xl text-sm sm:text-base md:text-lg font-medium text-slate-100">
+        <h1 className="mt-3 text-xs font-medium text-slate-100 sm:mt-4 sm:text-base md:text-lg">
           {subtitle}
         </h1>
       </div>
     </section>
-  )
+  );
 }
 
-export default PageHeader
+export default PageHeader;

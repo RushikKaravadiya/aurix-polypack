@@ -12,12 +12,15 @@ import ProductDetails from './pages/ProductDetails'
 import Contact from './pages/Contact'
 import Quote from './pages/Quote'
 import NotFound from './pages/NotFound'
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
+  
   const location = useLocation()
 
   return (
     <div className="min-h-screen bg-background text-primary">
+      <ScrollToTop />
       <ScrollProgressBar />
       <Navbar />
       <AnimatePresence mode="wait">

@@ -62,22 +62,18 @@ function ProductDetails() {
         </div>
         <div className="grid gap-10 lg:grid-cols-[1fr_1fr] items-start">
           <div className="lg:sticky lg:top-28 self-start">
-            <div className="mb-6 flex h-[500px] items-center justify-center overflow-hidden rounded-[32px] border border-slate-200 bg-white p-6 shadow-soft">
-              <img
-                src={selectedImage || product.image}
-                alt={product.name}
-                className="max-h-full max-w-full object-contain"
-              />
+            <div className="mb-5 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-soft">
+              <div className="flex h-[300px] sm:h-[420px] lg:h-[500px] items-center justify-center p-4 sm:p-6">
+                <img
+                  src={selectedImage || product.image}
+                  alt={product.name}
+                  className="max-h-full max-w-full object-contain transition-all duration-300"
+                />
+              </div>
             </div>
 
-            <div className="mt-4 overflow-x-auto">
-              <div
-                className="flex gap-3"
-                style={{
-                  width: "100%",
-                  overflowX: "auto",
-                }}
-              >
+            <div className="overflow-x-auto scrollbar-hide">
+              <div className="flex snap-x snap-mandatory gap-3 pb-2">
                 {product.gallery.map((item, index) => {
                   const isActive =
                     selectedImage === item ||
@@ -87,16 +83,17 @@ function ProductDetails() {
                     <button
                       key={index}
                       onClick={() => setSelectedImage(item)}
-                      className={`flex-none w-[23%] min-w-[90px] rounded-xl border p-1 ${
-                        isActive
-                          ? "border-primary ring-2 ring-primary/20"
-                          : "border-slate-200"
-                      }`}
+                      className={`snap-start shrink-0 rounded-2xl border bg-white p-1 transition-all duration-300
+          ${
+            isActive
+              ? "border-primary ring-2 ring-primary/30"
+              : "border-slate-200 hover:border-primary"
+          }`}
                     >
                       <img
                         src={item}
                         alt=""
-                        className="h-20 w-full rounded-lg object-contain bg-white"
+                        className="h-16 w-16 sm:h-20 sm:w-20 rounded-xl object-cover"
                       />
                     </button>
                   );
@@ -104,7 +101,6 @@ function ProductDetails() {
               </div>
             </div>
           </div>
-
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

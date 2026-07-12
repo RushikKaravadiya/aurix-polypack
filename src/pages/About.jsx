@@ -20,7 +20,7 @@ function About() {
         </div>
       </section>
 
-      <section className="bg-white py-20">
+      <section className="bg-white py-8">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
           <div className="rounded-3xl border border-slate-200 p-8">
             <h3 className="text-2xl font-semibold text-primary">Mission</h3>
@@ -37,7 +37,7 @@ function About() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="rounded-[32px] bg-background p-8 shadow-soft lg:p-12">
           <h2 className="text-3xl font-semibold text-primary">Our Strength</h2>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
