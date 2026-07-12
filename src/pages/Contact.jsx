@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import ContactInfo from "../components/ContactInfo";
 import PageHeader from "../components/PageHeader";
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
-import emailConfig from "../config/emailjs";
+import emailjs from 'emailjs-com'
+import emailConfig from '../config/emailjs'
 
 function Contact() {
   const [form, setForm] = useState({
