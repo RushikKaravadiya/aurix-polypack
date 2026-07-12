@@ -60,7 +60,15 @@ function About() {
             viewport={{ once: true }}
             src={MainLogo}
             alt="Manufacturing unit"
-            className="h-[450px] w-full rounded-[32px] object-cover shadow-soft"
+            className="
+              w-full
+              h-auto
+              rounded-[32px]
+              shadow-soft
+              object-contain
+              lg:h-[450px]
+              lg:object-cover
+            "
           />
           <div className="space-y-5">
             <h2 className="text-3xl font-semibold text-primary">
