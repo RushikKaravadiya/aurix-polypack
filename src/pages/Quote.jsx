@@ -83,7 +83,7 @@ function Quote() {
     <main>
       <PageHeader title="Quote Request" subtitle="Request a tailored quote for your business" />
 
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-soft lg:p-10">
           <form onSubmit={handleSubmit} className="grid gap-4 md:grid-cols-2">
             {[
