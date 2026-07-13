@@ -19,7 +19,7 @@ const stats = [
     value: 125,
   },
   {
-    label: "Export Markets",
+    label: "Countries Served",
     value: 7,
   },
 ];
