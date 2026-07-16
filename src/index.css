@@ -31,13 +31,13 @@ body {
 }
 
 ::selection {
-  background: #D4A642;
+  background: #DCAB36;
   color: white;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #D4A642 !important;
+  color: #DCAB36 !important;
   width: 30px;
   height: 30px;
   bottom: 15px !important;
@@ -64,5 +64,5 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-  background: #D4A642 !important;
+  background: #DCAB36 !important;
 }

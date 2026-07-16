@@ -13,76 +13,92 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
-      {/* <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"> */}
+    <header className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-       <Link to="/" className="flex items-center border-0 outline-none">
-  <img
-    src="/images/horizontalLogo.png"
-    alt="Aurix Polypack logo"
-    className="h-36 w-auto object-contain border-0 outline-none"
-  />
-</Link>
+        {/* Logo */}
+        <Link
+          to="/"
+          onClick={scrollToTop}
+          className="flex items-center flex-shrink-0"
+        >
+          <img
+            src="/images/horiLogo.png"
+            alt="Aurix Polypack"    
+            className="h-28 w-auto object-contain scale-125 origin-left"
+            style={{ marginTop: "16px" }}
+          />
+        </Link>
 
-        <nav className="hidden items-center gap-7 lg:flex">
+        {/* Desktop Menu */}
+        <nav className="hidden items-center gap-8 lg:flex">
           {navItems.map((item) => (
             <NavLink
               key={item.name}
               to={item.path}
               onClick={scrollToTop}
               className={({ isActive }) =>
-                `text-sm font-medium transition ${isActive ? "text-gold" : "text-primary hover:text-gold"}`
+                `text-sm font-semibold transition-colors duration-300 ${
+                  isActive ? "text-gold" : "text-primary hover:text-gold"
+                }`
               }
             >
               {item.name}
             </NavLink>
           ))}
+
           <Link
             to="/quote"
             onClick={scrollToTop}
-            className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-darkBlue"
+            className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-darkBlue"
           >
             Quote Us
           </Link>
         </nav>
 
+        {/* Mobile Button */}
         <button
-          className="rounded-full p-2 text-primary lg:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
+          className="rounded-md p-2 text-primary lg:hidden"
         >
-          {menuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+          {menuOpen ? <FiX size={26} /> : <FiMenu size={26} />}
         </button>
       </div>
 
+      {/* Mobile Menu */}
       {menuOpen && (
-        <div className="border-t border-slate-200 bg-white px-4 py-4 lg:hidden">
-          <div className="flex flex-col gap-3">
+        <div className="border-t border-slate-200 bg-white lg:hidden">
+          <div className="flex flex-col px-5 py-4">
             {navItems.map((item) => (
               <NavLink
                 key={item.name}
                 to={item.path}
-                className={({ isActive }) =>
-                  `rounded px-3 py-2 text-sm font-medium ${isActive ? "bg-primary text-white" : "text-primary"}`
-                }
                 onClick={() => {
-                  setMenuOpen(false)
-                  scrollToTop()
+                  setMenuOpen(false);
+                  scrollToTop();
                 }}
+                className={({ isActive }) =>
+                  `rounded-md px-3 py-3 text-sm font-medium ${
+                    isActive
+                      ? "bg-primary text-white"
+                      : "text-primary hover:bg-slate-100"
+                  }`
+                }
               >
                 {item.name}
               </NavLink>
             ))}
+
             <Link
               to="/quote"
               onClick={() => {
-                setMenuOpen(false)
-                scrollToTop()
+                setMenuOpen(false);
+                scrollToTop();
               }}
-              className="rounded-full bg-primary px-4 py-2 text-center text-sm font-semibold text-white"
+              className="mt-3 rounded-full bg-primary px-5 py-3 text-center text-sm font-semibold text-white"
             >
               Quote Us
             </Link>

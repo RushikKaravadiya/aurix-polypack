@@ -21,7 +21,7 @@ function PageHeader({ title, subtitle }) {
 
       {/* Content */}
       <div className="relative mx-auto max-w-7xl text-center">
-        <p className="text-xl font-semibold uppercase tracking-[0.2em] text-[#D4A642] sm:text-3xl sm:tracking-[0.3em] lg:text-4xl">
+        <p className="text-xl font-semibold uppercase tracking-[0.2em] text-[#DCAB36] sm:text-3xl sm:tracking-[0.3em] lg:text-4xl">
           {title}
         </p>
 

@@ -6,8 +6,8 @@ export default {
       colors: {
         primary: "#061F4A",
         darkBlue: "#04183C",
-        gold: "#D4A642",
-        lightGold: "#DDAF4C",
+        gold: "#DCAB36",
+        lightGold: "#E3B445",
         background: "#F8FAFC",
       },
       boxShadow: {
