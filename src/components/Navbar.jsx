@@ -18,7 +18,7 @@ function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" style={{paddingLeft: "0px",}}>
         {/* Logo */}
         <Link
           to="/"
@@ -26,9 +26,9 @@ function Navbar() {
           className="flex items-center flex-shrink-0"
         >
           <img
-            src="/images/horiLogo.png"
+            src="/images/hori2.png"
             alt="Aurix Polypack"    
-            className="h-28 w-auto object-contain scale-125 origin-left"
+            className="h-36 w-auto object-contain scale-125 origin-left"
             style={{ marginTop: "16px" }}
           />
         </Link>
