@@ -26,10 +26,10 @@ function Navbar() {
           className="flex items-center flex-shrink-0"
         >
           <img
-            src="/images/HoriLogo2.png"
+            src="/images/horizontalLogo.png"
             alt="Aurix Polypack"    
-            className="h-36 w-auto object-contain scale-125 origin-left"
-            style={{ marginTop: "16px" }}
+            className="h-24 w-auto object-contain scale-125 origin-left"
+            // style={{ marginTop: "16px" }}
           />
         </Link>
 
