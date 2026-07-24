@@ -54,12 +54,21 @@ function Footer() {
           <ul className="space-y-3 text-sm text-slate-300">
             <li>Thorala Road, At Rajpar, Morbi - 363641, Gujarat, India</li>
 
-            <li>
+            <li className="flex items-center gap-3 flex-wrap">
               <a
                 href="tel:+919979936435"
                 className="transition hover:text-gold"
               >
                 +91 99799 36435
+              </a>
+
+              <span>|</span>
+
+              <a
+                href="tel:+919925852651"
+                className="transition hover:text-gold"
+              >
+                +91 99258 52651
               </a>
             </li>
 

@@ -1,4 +1,9 @@
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa'
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaClock,
+} from "react-icons/fa";
 
 function ContactInfo() {
   return (
@@ -9,7 +14,9 @@ function ContactInfo() {
             <FaMapMarkerAlt />
           </div>
         </div>
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary">Address</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary">
+          Address
+        </p>
         <p className="mt-4 text-sm leading-7 text-slate-600">
           Thorala Rd, At, Rajpar, Thorala,
           <br /> Gujarat 363641
@@ -22,8 +29,26 @@ function ContactInfo() {
             <FaPhoneAlt />
           </div>
         </div>
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary">Phone</p>
-        <a href="tel:+919979936435" className="mt-4 text-sm leading-7 text-slate-600 hover:text-gold">+91 99799 36435</a>
+
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary">
+          Phone
+        </p>
+
+        <div className="mt-4 flex flex-col gap-2">
+          <a
+            href="tel:+919979936435"
+            className="text-sm text-slate-600 hover:text-gold"
+          >
+            +91 99799 36435
+          </a>
+
+          <a
+            href="tel:+919925852651"
+            className="text-sm text-slate-600 hover:text-gold"
+          >
+            +91 99258 52651
+          </a>
+        </div>
       </div>
 
       <div className="flex h-full flex-col items-center justify-center rounded-[32px] border border-slate-200 bg-white p-6 text-center shadow-soft transition hover:-translate-y-1 hover:shadow-xl">
@@ -32,8 +57,15 @@ function ContactInfo() {
             <FaEnvelope />
           </div>
         </div>
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary">Email</p>
-        <a href="mailto:aurixpolypack@gmail.com" className="mt-4 text-sm leading-7 text-slate-600 hover:text-gold">aurixpolypack@gmail.com</a>
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary">
+          Email
+        </p>
+        <a
+          href="mailto:aurixpolypack@gmail.com"
+          className="mt-4 text-sm leading-7 text-slate-600 hover:text-gold"
+        >
+          aurixpolypack@gmail.com
+        </a>
       </div>
 
       <div className="flex h-full flex-col items-center justify-center rounded-[32px] border border-slate-200 bg-white p-6 text-center shadow-soft transition hover:-translate-y-1 hover:shadow-xl">
@@ -42,11 +74,15 @@ function ContactInfo() {
             <FaClock />
           </div>
         </div>
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary">Working Hours</p>
-        <p className="mt-4 text-sm leading-7 text-slate-600">Mon - Sat • 9:00 AM - 6:00 PM</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary">
+          Working Hours
+        </p>
+        <p className="mt-4 text-sm leading-7 text-slate-600">
+          Mon - Sat • 9:00 AM - 6:00 PM
+        </p>
       </div>
     </div>
-  )
+  );
 }
 
-export default ContactInfo
+export default ContactInfo;
